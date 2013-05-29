@@ -9,8 +9,8 @@ class MyCommentForm(PloneAppDiscussionCommentForm):
 
     def updateWidgets(self):
         super(MyCommentForm, self).updateWidgets()
-        self.widgets['author_name'].mode = interfaces.INPUT_MODE
-        self.widgets['author_email'].mode = interfaces.INPUT_MODE
+        #self.widgets['author_name'].mode = interfaces.INPUT_MODE
+        #self.widgets['author_email'].mode = interfaces.INPUT_MODE
 
 
 class CommentsViewlet(PloneAppDiscussionCommentsViewlet):

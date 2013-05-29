@@ -17,13 +17,13 @@ from plone.app.discussion.comment import Comment
 
 # Interface to define the fields we want to add to the comment form.
 class ICommentExtenderFields(Interface):
-    website = schema.TextLine(title=u"Website", required=False)
+    custom_name = schema.TextLine(title=u"Name", required=False)
 
 # Persistent class that implements the ICommentExtenderFields interface
 class CommentExtenderFields(Persistent):
     interface.implements(ICommentExtenderFields)
     adapts(Comment)
-    website = u""
+    custom_name = u""
 
 # CommentExtenderFields factory
 CommentExtenderFactory = factory(CommentExtenderFields)
@@ -44,5 +44,5 @@ class CommentExtender(extensible.FormExtender):
         # Add the fields defined in ICommentExtenderFields to the form.
         self.add(ICommentExtenderFields, prefix="")
         # Move the website field to the top of the comment form.
-        self.move('website', before='text', prefix="")
+        self.move('custom_name', before='text', prefix="")
 
