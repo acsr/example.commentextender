@@ -17,7 +17,7 @@ from plone.app.discussion.comment import Comment
 
 # Interface to define the fields we want to add to the comment form.
 class ICommentExtenderFields(Interface):
-    custom_name = schema.TextLine(title=u"Name", required=False)
+    custom_name = schema.TextLine(title=u"Name", required=True)
 
 # Persistent class that implements the ICommentExtenderFields interface
 class CommentExtenderFields(Persistent):
