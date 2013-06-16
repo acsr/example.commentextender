@@ -153,4 +153,9 @@
         </fieldset>
     </div>
 
+    <script>
+        $("#commenting #form-widgets-custom_name").attr("required","required").attr("maxlength","50");
+        $("#commenting form").validator();
+    </script>
+
 </tal:block>
