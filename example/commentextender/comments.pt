@@ -153,8 +153,8 @@
         </fieldset>
     </div>
 
-    <script>
-        $("#commenting #form-widgets-custom_name").attr("required","required").attr("maxlength","50");
+    <script tal:condition="nothing">
+        $("#commenting #form-widgets-custom_name").attr("maxlength","50");
         $("#commenting form").validator();
     </script>
 
